@@ -1,0 +1,12 @@
+#indef tablica.h
+#define tablica.h
+
+class tablica
+{
+  int *tab, csize, occupied;
+ public:
+  void dodaj(int x);
+  void display();
+};
+
+#endif
