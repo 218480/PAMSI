@@ -1,7 +1,7 @@
 pamsi1.exe: main.o tablica.o stoper.o pomiartablicy.o
 	g++ -g -std=c++11 main.o tablica.o stoper.o pomiartablicy.o -o pamsi1.exe
 
-pomiartablicy.o: pomiartablicy.cpp tablica.h stoper.h interface.cpp
+pomiartablicy.o: pomiartablicy.cpp tablica.h stoper.h interface.h
 	g++ -g -std=c++11 -c -o pomiartablicy.o pomiartablicy.cpp
 
 tablica.o: tablica.cpp tablica.h

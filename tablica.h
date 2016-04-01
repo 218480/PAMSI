@@ -8,6 +8,7 @@ class tablica
   int csize=DEF_SIZE;              /*obecny rozmiar tablicy*/
   int occupied=1;                  /*nastepne miejsce w tablicy*/
  public:
+~tablica(){delete tab;};
   void dodaj(int x);
   void display();
 };

@@ -1,11 +1,8 @@
 #include "tablica.h"
 #include "stoper.h"
-#include "interface.h"
+#include "pomiartablicy.h"
 
-class pomiartablicy: public interface
-{
-public:
-  double wykonaj_pomiar(int ilosc){
+  double pomiartablicy::wykonaj_pomiar(int ilosc){
     tablica tab;
     int i=0;
     stoper s1;
@@ -13,7 +10,4 @@ public:
     for(i=0;i<ilosc;i++)
       tab.dodaj(i);
     return s1.stop();
-  }
-
-
-};
+}

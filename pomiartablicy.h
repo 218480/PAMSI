@@ -1,6 +1,6 @@
 #include "interface.cpp"
-class pomiartablicy: public interface
+class pomiartablicy : public interface
 {
+public:
   double wykonaj_pomiar(int ilosc);
-  void przygotuj(){}
 };

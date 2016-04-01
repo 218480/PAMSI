@@ -8,12 +8,12 @@ void tablica::dodaj(int x){
     int i;                       /*licznik petli*/
     if (occupied==csize)         /*sprawdza czy nie ma miejsc w tablicy*/
       {
-	temp=new int[csize+1];   /*tworzy nowa tablice*/
+	temp=new int[csize+100];   /*tworzy nowa tablice*/
 	for(i=0;i<csize;i++)     /*przepisuje zawartosc tablicy*/
 	  temp[i]=tab[i];
 	delete [] tab;           /*zwalnia obszar zajety przez stara tablice*/
 	tab=temp;                /*przypisuje nowa tablice do wskaznika*/
-	csize++;                 /*zapisuje nowy rozmiar tablicy*/
+	csize+=100;                 /*zapisuje nowy rozmiar tablicy*/
       }
     tab[occupied-1]=x;           /*wpisuje zadana wartosc do tablicy*/
     occupied++;                  /*oznacza zajecie miejsca w tablicy*/
