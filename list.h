@@ -12,6 +12,7 @@ private:
   void remove(int);
   int get(int);
   int size();
+void fill(int);
 
 };
 

@@ -10,9 +10,14 @@
 using namespace std;
 int main(){
 pomiarlisty p1;
+list l1;
+int i;
+l1.fill(10);
+for(i=0;i<10;i++)
+cout << l1.get(i) << endl;
+cout << l1.size() <<endl;/*
 int i=0, number[]={10,100, 1000, 1000000, 1000000000};
-for(i=0;i<5;i++){
-cout << "czas dla " << number[i] << " elementow: ";
-cout << p1.wykonaj_pomiar(number[i]) << endl;}
+for(i=0;i<5;i++)
+cout << "czas dla " << number[i] << " elementow: " << p1.wykonaj_pomiar(number[i]) << endl;*/
   return 0;
 };

@@ -1,4 +1,6 @@
 #include "list.h"
+#include <cstdlib>
+#include <ctime>
 int list::size()
 {
   int i=0;
@@ -69,5 +71,17 @@ else{
 nowy->next=nullptr;
 first=nowy;}
   return size();
+}
+void list::fill(int ilosc){
+
+srand(time(NULL));
+element *nowy;
+int i;
+for(i=0;i<ilosc;i++){
+nowy=new element;
+nowy->ele=std::rand();
+nowy->next=first;
+first=nowy;
+}
 }
 
