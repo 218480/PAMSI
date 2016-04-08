@@ -1,0 +1,29 @@
+#include "stack.h"
+int stack::size()
+{
+  return list::size();
+}
+
+void stack::remove(int position){
+list::remove(position);
+}
+
+int stack::get(int position){
+return list::get(position);
+}
+
+
+int stack::add(int numb, int position){
+list::add(numb, position);
+  return size();
+}
+
+int stack::pop(){
+  int temp=get(1);
+  remove(1);
+  return temp;
+}
+
+void stack::push(int number){
+  add(number, 0);
+}

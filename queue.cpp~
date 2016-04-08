@@ -1,24 +1,24 @@
-#include "stack.h"
-int stack::size()
+#include "queue.h"
+int queue::size()
 {
   return list::size();
 }
 
-void stack::remove(int position){
+void queue::remove(int position){
 list::remove(position);
 }
 
-int stack::get(int position){
+int queue::get(int position){
 return list::get(position);
 }
 
 
-int stack::add(int numb, int position){
+int queue::add(int numb, int position){
 list::add(numb, position);
   return size();
 }
 
-int stack::pop(){
+int queue::pop(){
   int temp;
 if(size()>0){
 temp=get(1);
@@ -27,6 +27,6 @@ temp=get(1);
 else return -1;
 }
 
-void stack::push(int number){
-  add(number, 0);
+void queue::push(int number){
+  add(number, size());
 }

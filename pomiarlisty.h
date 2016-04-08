@@ -1,5 +1,5 @@
 #include "interface.cpp"
-class pomiartablicy : public interface
+class pomiarlisty : public interface
 {
 public:
   double wykonaj_pomiar(int ilosc);

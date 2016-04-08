@@ -1,7 +1,8 @@
 #include "ilist.h"
-#ifndef guard_istack
-#define guard_istack
-class istack : public ilist
+#ifndef guard_iqueue
+#define guard_iqueue
+/*owijka listy dla implementacji struktury kolejki*/
+class iqueue : public ilist
 {
 
 };

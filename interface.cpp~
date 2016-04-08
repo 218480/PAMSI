@@ -1,5 +1,8 @@
+#ifndef guard_interface
+#define guard_interface
 class interface
 {
 public:
-  virtual double wykonaj_pomiar(int ilosc) =0;
+  virtual double wykonaj_pomiar(int ilosc) = 0;
 };
+#endif

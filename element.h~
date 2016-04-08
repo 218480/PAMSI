@@ -1,0 +1,11 @@
+#ifndef guard_element
+#define guard_element
+/*element struktury listy lub jednej z jej owijek*/
+class element
+{
+ public:
+  int ele;
+  element *next=nullptr;
+  element(){}; 
+};
+#endif

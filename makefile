@@ -1,5 +1,5 @@
-pamsi1.exe: main.o tablica.o stoper.o pomiartablicy.o stack.o
-	g++ -g -std=c++11 main.o tablica.o stoper.o pomiartablicy.o stack.o -o pamsi1.exe
+pamsi1.exe: main.o tablica.o stoper.o pomiartablicy.o stack.o list.o queue.o pomiarlisty.o
+	g++ -g -std=c++11 main.o tablica.o stoper.o pomiartablicy.o stack.o list.o pomiarlisty.o queue.o -o pamsi1.exe
 
 pomiartablicy.o: pomiartablicy.cpp tablica.h stoper.h interface.cpp
 	g++ -g -std=c++11 -c -o pomiartablicy.o pomiartablicy.cpp
@@ -16,5 +16,14 @@ stoper.o: stoper.cpp stoper.h
 interface.o: interface.cpp
 	g++ -g -std=c++11 -c -o interface.o interface.cpp
 
+list.o: list.cpp list.h ilist.h element.h
+	g++ -g -std=c++11 -c -o list.o list.cpp
+
 stack.o: stack.cpp stack.h istack.h ilist.h element.h
 	g++ -g -std=c++11 -c -o stack.o stack.cpp
+
+queue.o: queue.cpp queue.h iqueue.h ilist.h element.h
+	g++ -g -std=c++11 -c -o queue.o queue.cpp
+
+pomiarlisty.o: pomiarlisty.cpp pomiarlisty.h interface.cpp
+	g++ -g -std=c++11 -c -o pomiarlisty.o pomiarlisty.cpp

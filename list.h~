@@ -1,0 +1,18 @@
+#ifndef guard_list
+#define guard_list
+#include "ilist.h"
+
+class list : public ilist
+{
+private:
+  element *first=nullptr;
+  element* search(int);
+ public:
+  int add(int, int);
+  void remove(int);
+  int get(int);
+  int size();
+
+};
+
+#endif
