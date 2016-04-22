@@ -1,11 +1,11 @@
 #ifndef guard_node
 #define guard_node
-
+#include <string>
 class node{
  public:
-  char *key;
+  std::string key;
   int value=0;
-  node *next=nullptr;
+  node *next=0;
 };
 
 #endif

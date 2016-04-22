@@ -1,20 +1,14 @@
-#include "list.h"
+#include "alist.h"
 #include <cstdlib>
 #include <ctime>
-int list::size()
+int alist::size()
 {
-  int i=0;
-  element *test=first;
-  while(test!=nullptr)
-    {
-      test=test->next;
-      i++;
-    }
-  return i;
+
+  return rozmiar;
 }
 
-element* list::search(int position){
-element *test=first;
+node* alist::search(int position){
+node *test=first;
 double s=size();
 if(s<position)
 position=s;
@@ -25,9 +19,9 @@ position--;
 return test;
 }
 
-void list::remove(int position){
-  element *temp;
-  element *temp2;
+void alist::remove(int position){
+  node *temp;
+  node *temp2;
 if(position==1){
 temp=first->next;
 delete first;
@@ -38,28 +32,31 @@ if(size()>=position){
   temp=search(position-1);
   temp2=temp->next;
   temp->next=temp2->next;
+rozmiar--;
   delete temp2;
   }
 }
 
-int list::get(int position){
-element *temp;
+int alist::get(int position){
+node *temp;
 double s=size();
   if (s>=position)
   {
 temp=search(position);
-  return temp->ele;
+  return temp->value;
   }
   else return 0;
 }
 
 
-int list::add(int numb, int position){
-  element *nowy = new element;
-  element *temp, *temp2;
-double s=size();
-  nowy->ele=numb;
-if(s!=0){
+int alist::add(int numb, int position, std::string klucz){
+  node *nowy;
+nowy = new node;
+  node *temp, *temp2;
+  double s=size();
+  nowy->value=numb;
+  nowy->key=klucz;
+/*if(s!=0){
 if(s<position)
 position=s;
 temp=search(position);
@@ -67,21 +64,23 @@ temp2=temp->next;
 temp->next=nowy;
 nowy->next=temp2;
 }
-else{
-nowy->next=nullptr;
+else{*/
+nowy->next=0;
 first=nowy;}
-  return size();
+rozmiar++;
+  return s+1;
 }
-void list::fill(int ilosc){
+void alist::fill(int ilosc){
 
 srand(time(NULL));
-element *nowy;
+node *nowy;
 int i;
 for(i=0;i<ilosc;i++){
-nowy=new element;
-nowy->ele=std::rand();
+nowy=new node;
+nowy->value=std::rand();
 nowy->next=first;
 first=nowy;
+rozmiar++;
 }
 }
 

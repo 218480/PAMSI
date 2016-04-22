@@ -3,14 +3,8 @@
 #include <ctime>
 int alist::size()
 {
-  int i=0;
-  node *test=first;
-  while(test!=nullptr)
-    {
-      test=test->next;
-      i++;
-    }
-  return i;
+
+  return rozmiar;
 }
 
 node* alist::search(int position){
@@ -38,6 +32,7 @@ if(size()>=position){
   temp=search(position-1);
   temp2=temp->next;
   temp->next=temp2->next;
+rozmiar--;
   delete temp2;
   }
 }
@@ -54,13 +49,14 @@ temp=search(position);
 }
 
 
-int alist::add(int numb, int position, char *klucz){
-  node *nowy = new node;
+int alist::add(int numb, int position, std::string klucz){
+  node *nowy;
+nowy = new node;
   node *temp, *temp2;
   double s=size();
   nowy->value=numb;
   nowy->key=klucz;
-if(s!=0){
+/*if(s!=0){
 if(s<position)
 position=s;
 temp=search(position);
@@ -68,10 +64,11 @@ temp2=temp->next;
 temp->next=nowy;
 nowy->next=temp2;
 }
-else{
-nowy->next=nullptr;
-first=nowy;}
-  return size();
+else{*/
+nowy->next=0;
+first=nowy;/*}*/
+rozmiar++;
+  return s+1;
 }
 void alist::fill(int ilosc){
 
@@ -83,6 +80,7 @@ nowy=new node;
 nowy->value=std::rand();
 nowy->next=first;
 first=nowy;
+rozmiar++;
 }
 }
 

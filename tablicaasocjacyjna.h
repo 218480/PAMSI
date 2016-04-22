@@ -5,12 +5,15 @@
 
 class tablicaasocjacyjna{
  private:
-  alist listy[500];
-  int hash(char*);
+  int size=10;
+  alist *listy;
+  int hash(std::string);
  public:
-  int odczytaj(char*);
-  int operator[](char* element){return odczytaj(element);}
-  void dodaj(char*,int);
+ tablicaasocjacyjna(unsigned int a){size =a; listy = new alist[size];}
+~tablicaasocjacyjna(){delete [] listy;}
+  int odczytaj(std::string);
+  int operator[](std::string element){return odczytaj(element);}
+  void dodaj(std::string,int);
 };
 
 #endif
