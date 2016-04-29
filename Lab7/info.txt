@@ -1,0 +1,3 @@
+implementacja grafu
+implementacja DFS BFS
+sprawdzic zlozonosc obliczeniowa obu do 1e6
