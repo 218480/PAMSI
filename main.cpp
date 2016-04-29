@@ -8,14 +8,20 @@
 #include "queue.h"
 #include "tablicaasocjacyjna.h"
 #include "pomiarta.h"
+#include "tree.h"
+#include "pomiardrzewa.h"
 
 using namespace std;
 int main(){
-pomiarta p1;
-int i,danych[]={10,100,1000,1000000,1000000000};
+int i, j, ilosc[]={10,100,1000,1000000,1000000000};
+double czas;
+pomiardrzewa p1;
 for(i=0;i<5;i++){
-cout<<danych[i]<<":"<<endl;
-p1.wykonaj_pomiar(danych[i]);
+czas=0;
+for(j=0;j<10;j++){
+czas+=p1.wykonaj_pomiar(ilosc[i])/10;
+}
+cout <<"czas pomiaru dla " << ilosc[i] << " danych: "<< czas << " ms" << endl;
 }
   return 0;
 };

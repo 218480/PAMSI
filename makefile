@@ -1,5 +1,5 @@
-pamsi1.exe: main.o tablica.o stoper.o pomiartablicy.o stack.o list.o queue.o pomiarlisty.o alist.o tablicaasocjacyjna.o pomiarta.o
-	g++ -g -std=c++11 main.o tablica.o stoper.o pomiartablicy.o stack.o list.o pomiarlisty.o queue.o alist.o tablicaasocjacyjna.o pomiarta.o -o pamsi1.exe
+pamsi1.exe: main.o tablica.o stoper.o pomiartablicy.o stack.o list.o queue.o pomiarlisty.o alist.o tablicaasocjacyjna.o pomiarta.o tree.o pomiardrzewa.o
+	g++ -g -std=c++11 main.o tablica.o stoper.o pomiartablicy.o stack.o list.o pomiarlisty.o queue.o alist.o tablicaasocjacyjna.o pomiarta.o tree.o pomiardrzewa.o -o pamsi1.exe
 
 pomiartablicy.o: pomiartablicy.cpp tablica.h stoper.h interface.cpp
 	g++ -g -std=c++11 -c -o pomiartablicy.o pomiartablicy.cpp
@@ -36,3 +36,9 @@ tablicaasocjacyjna.o: tablicaasocjacyjna.h tablicaasocjacyjna.cpp
 
 pomiarta.o: pomiarta.cpp pomiarta.h
 	g++ -g -std=c++11 -c -o pomiarta.o pomiarta.cpp
+
+tree.o: tree.cpp tree.h
+	g++ -g -std=c++11 -c -o tree.o tree.cpp
+
+pomiardrzewa.o: pomiardrzewa.h pomiardrzewa.cpp
+	g++ -g -std=c++11 -c -o pomiardrzewa.o pomiardrzewa.cpp
