@@ -73,7 +73,6 @@ void graph::test(int x)
 {
 int i;
   bool **temp=new bool*[x];
-graph::add_vertex();
   for(i=0;i<x;i++)
       temp[i]=new bool[x];
       for(i=0;i<rozmiar;i++)

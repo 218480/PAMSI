@@ -27,5 +27,24 @@ for(j=0;j<10;j++)
 suma+=p1.wykonaj_pomiar(ilosc[i])/10;
 cout<<"czas dla " << ilosc[i] << " elementow: " << suma << " ms" << endl;
 }
+/*  graph g1;
+stack s1;
+  bfs d1;
+  g1.add_vertex();
+  g1.add_vertex();
+  g1.add_vertex();
+  g1.add_vertex();
+  g1.add_edge(1,2);
+g1.add_edge(2,3);
+  if(g1.is_connected(0,1)) cout<<"a "<<endl;
+  g1.add_edge(0,1);
+  if(g1.is_connected(0,1)) cout<<"b "<<endl;
+  if(g1.is_connected(1,2)) cout<<"c "<<endl;
+  s1=d1.search(g1,0,3);
+  s=s1.size();
+  for(i;i<s-1;i++)
+  cout<<s1.pop() << "->";
+  cout<<endl;
+*/
   return 0;
 };

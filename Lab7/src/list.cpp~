@@ -62,16 +62,10 @@ double s=size();
 if(s!=0){
 if(s<position)
 position=s;
-if(position==0){
-nowy->next=first;
-first=nowy;
-}
-else{
 temp=search(position);
 temp2=temp->next;
 temp->next=nowy;
 nowy->next=temp2;
-}
 }
 else{
 nowy->next=nullptr;

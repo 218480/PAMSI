@@ -53,4 +53,4 @@ pamsi1.exe: ./obj/main.o ./obj/tablica.o ./obj/stoper.o ./obj/pomiartablicy.o ./
 	g++ -g -std=c++11 -c -o ./obj/bfs.o ./src/bfs.cpp
 
 ./obj/pomiarprzeszukan.o: ./inc/pomiarprzeszukan.h ./src/pomiarprzeszukan.cpp
-	g++ -g -std=c++11 -c -o ./obj/pomiarprzeszukan.o ./src/pomiarprzeszukan.cpp
+	g++ -g -std=c++11 -c -o ./obj/pomiarprzeszukan.cpp ./src/pomiarprzeszukan.cpp
