@@ -1,4 +1,5 @@
 #include "../inc/stack.h"
+#include <iostream>
 int stack::size()
 {
   return list::size();
@@ -30,3 +31,4 @@ else return -1;
 void stack::push(int number){
   add(number, 0);
 }
+

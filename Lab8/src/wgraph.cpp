@@ -99,3 +99,4 @@ int wgraph::weight(int x, int y)
   return macierz[x][y];
 }
 
+

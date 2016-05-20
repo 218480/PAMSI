@@ -4,7 +4,7 @@
 class path{
  public:
   stack s;
-  int len;
+  int len=0;
 };
 
 

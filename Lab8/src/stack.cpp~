@@ -1,4 +1,5 @@
 #include "../inc/stack.h"
+#include <iostream>
 int stack::size()
 {
   return list::size();
@@ -28,5 +29,21 @@ else return -1;
 }
 
 void stack::push(int number){
-  add(number, 10);
+  add(number, 0);
 }
+
+void stack::display(){
+int i=0,s;
+std::cout<<"display";
+s=this->size();
+std::cout<<"size" <<s;
+int tab[s];
+for(i=0;i<s;s++)
+tab[i]=this->pop();
+for(i=0;i<s;s++){
+this->push(tab[i]);
+std::cout<<tab[i]<<"->";
+}
+std::cout<<std::endl;
+}
+

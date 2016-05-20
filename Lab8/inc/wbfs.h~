@@ -2,14 +2,14 @@
 #define guard_bfs
 #include "../inc/wgraph.h"
 #include "../inc/queue.h"
-class bfs
+class wbfs
 {
 private:
 int dist=1;
 bool visited(int*, int);
-bool browse(graph, int, stack&, int*, int);
+bool browse(wgraph, int, stack&, int*, int);
 public:
-stack search(graph, int, int);
+stack search(wgraph, int, int);
 };
 
 

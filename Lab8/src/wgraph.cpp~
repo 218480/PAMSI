@@ -45,6 +45,11 @@ void wgraph::add_edge(int x, int y, int w)
     throw "out of range target for new edge!";
 }
 
+void wgraph::add_edge(int x, int y)
+{
+  add_edge(x,y,1);
+}
+
 stack wgraph::get_neighbors(int x)
 {
   stack s1;
@@ -94,3 +99,19 @@ int wgraph::weight(int x, int y)
   return macierz[x][y];
 }
 
+void wgraph::test(int x)
+{
+int i;
+  int **temp=new int*[x];
+add_vertex();
+  for(i=0;i<x;i++)
+      temp[i]=new int[x];
+      for(i=0;i<rozmiar;i++)
+	delete [] macierz[i];
+      delete [] macierz;
+      macierz=temp;
+rozmiar = x;
+for(i=0;i<x-1;i++)
+graph::add_edge(i,i+1,1);
+
+}

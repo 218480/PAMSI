@@ -59,23 +59,21 @@ int list::add(int numb, int position){
   element *temp, *temp2;
 double s=size();
   nowy->ele=numb;
-if(s!=0){
+if(s!=0 && position!=0){
 if(s<position)
 position=s;
-if(position==0){
-nowy->next=first;
-first=nowy;
-}
-else{
 temp=search(position);
 temp2=temp->next;
 temp->next=nowy;
 nowy->next=temp2;
 }
-}
-else{
+else if(position!=0){
 nowy->next=nullptr;
 first=nowy;}
+else{
+nowy->next=first;
+first=nowy;
+}
   return size();
 }
 void list::fill(int ilosc){

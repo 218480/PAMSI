@@ -1,5 +1,5 @@
-pamsi1.exe: ./obj/main.o ./obj/tablica.o ./obj/stoper.o ./obj/pomiartablicy.o ./obj/stack.o ./obj/list.o ./obj/queue.o ./obj/pomiarlisty.o ./obj/alist.o ./obj/tablicaasocjacyjna.o ./obj/pomiarta.o ./obj/tree.o ./obj/pomiardrzewa.o ./obj/graph.o ./obj/dfs.o ./obj/bfs.o ./obj/pomiarprzeszukan.o ./obj/wgraph.o ./obj/bnb.o
-	g++ -g -std=c++11 ./obj/main.o ./obj/tablica.o ./obj/stoper.o ./obj/pomiartablicy.o ./obj/stack.o ./obj/list.o ./obj/pomiarlisty.o ./obj/queue.o ./obj/alist.o ./obj/tablicaasocjacyjna.o ./obj/pomiarta.o ./obj/tree.o ./obj/pomiardrzewa.o ./obj/graph.o ./obj/dfs.o ./obj/bfs.o ./obj/pomiarprzeszukan.o ./obj/bnb.o ./obj/wgraph.o -o pamsi1.exe
+pamsi1.exe: ./obj/main.o ./obj/tablica.o ./obj/stoper.o ./obj/pomiartablicy.o ./obj/stack.o ./obj/list.o ./obj/queue.o ./obj/pomiarlisty.o ./obj/alist.o ./obj/tablicaasocjacyjna.o ./obj/pomiarta.o ./obj/tree.o ./obj/pomiardrzewa.o ./obj/graph.o ./obj/dfs.o ./obj/bfs.o ./obj/pomiarprzeszukan.o ./obj/wgraph.o ./obj/bnb.o ./obj/bnbe.o ./obj/pomiardrogi.o
+	g++ -g -std=c++11 ./obj/main.o ./obj/tablica.o ./obj/stoper.o ./obj/pomiartablicy.o ./obj/stack.o ./obj/list.o ./obj/pomiarlisty.o ./obj/queue.o ./obj/alist.o ./obj/tablicaasocjacyjna.o ./obj/pomiarta.o ./obj/tree.o ./obj/pomiardrzewa.o ./obj/graph.o ./obj/dfs.o ./obj/bfs.o ./obj/pomiarprzeszukan.o ./obj/bnb.o ./obj/wgraph.o ./obj/bnbe.o ./obj/pomiardrogi.o -o pamsi1.exe
 
 ./obj/pomiartablicy.o: ./src/pomiartablicy.cpp ./inc/tablica.h ./inc/stoper.h ./inc/interface.h
 	g++ -g -std=c++11 -c -o ./obj/pomiartablicy.o ./src/pomiartablicy.cpp
@@ -60,3 +60,9 @@ pamsi1.exe: ./obj/main.o ./obj/tablica.o ./obj/stoper.o ./obj/pomiartablicy.o ./
 
 ./obj/bnb.o: ./inc/bnb.h ./src/bnb.cpp ./inc/path.h ./inc/stack.h ./inc/wgraph.h
 	g++ -g -std=c++11 -c -o ./obj/bnb.o ./src/bnb.cpp
+
+./obj/bnbe.o: ./inc/bnbe.h ./src/bnbe.cpp ./inc/path.h ./inc/stack.h ./inc/wgraph.h
+	g++ -g -std=c++11 -c -o ./obj/bnbe.o ./src/bnbe.cpp
+
+./obj/pomiardrogi.o: ./inc/pomiardrogi.h ./src/pomiardrogi.cpp
+	g++ -g -std=c++11 -c -o ./obj/pomiardrogi.o ./src/pomiardrogi.cpp

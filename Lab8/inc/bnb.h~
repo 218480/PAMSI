@@ -1,15 +1,16 @@
-#ifndef guard_bfs
-#define guard_bfs
-#include "../inc/graph.h"
-#include "../inc/queue.h"
-class bfs
+#ifndef guard_bnb
+#define guard_bnb
+#include "../inc/wgraph.h"
+#include "../inc/path.h"
+class bnb
 {
 private:
-int dist=1;
-bool visited(int*, int);
-bool browse(graph, int, stack&, int*, int);
+  int dist=1;
+  stack best;
+  bool browse(wgraph, stack&, int, int, int);
 public:
-stack search(graph, int, int);
+int lenght,e=0;
+  stack search(wgraph, int, int);
 };
 
 

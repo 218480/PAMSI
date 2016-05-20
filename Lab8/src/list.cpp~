@@ -67,9 +67,13 @@ temp2=temp->next;
 temp->next=nowy;
 nowy->next=temp2;
 }
-else{
+else if(position!=0){
 nowy->next=nullptr;
 first=nowy;}
+else{
+nowy->next=first;
+first=nowy;
+}
   return size();
 }
 void list::fill(int ilosc){
